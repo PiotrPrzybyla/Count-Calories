@@ -23,5 +23,10 @@ namespace Count_Calories
         {
             InitializeComponent();
         }
+
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+            string inputValue = inputTextBox.Text;
+        }
     }
 }

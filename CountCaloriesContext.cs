@@ -75,6 +75,13 @@ namespace Count_Calories
                      MealId = 1001,
                      Date = new DateTime(2023, 03,25),
                      MealType = UserMeal.MealTypeENUM.Lunch,
+                 },
+                 new UserMeal()
+                 {
+                     Id = 3002,
+                     MealId = 1001,
+                     Date = new DateTime(2023, 03,25),
+                     MealType = UserMeal.MealTypeENUM.Lunch,
                  }
             };
             var products = new List<Product>

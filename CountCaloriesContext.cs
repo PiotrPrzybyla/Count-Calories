@@ -35,6 +35,30 @@ namespace Count_Calories
     {
         protected override void Seed(CountCaloriesContext context)
         {
+            var ingredients = new List<Ingredient>
+            {
+                new Ingredient()
+                {
+                    Id=4001,
+                    MealId = 1001,
+                    ProductId = 5001,
+                    IngredientWeight = 30,
+                },
+                new Ingredient()
+                {
+                    Id=4002,
+                    MealId = 1001,
+                    ProductId = 5002,
+                    IngredientWeight = 40,
+                },
+                new Ingredient()
+                {
+                    Id=4003,
+                    MealId = 1001,
+                    ProductId = 5003,
+                    IngredientWeight = 50,
+                },
+            };
             var meals = new List<Meal>
                 {
                     new Meal()
@@ -83,30 +107,7 @@ namespace Count_Calories
                     Protein=1200,
                 }   
             };
-            var ingredients = new List<Ingredient>
-            {
-                new Ingredient()
-                {
-                    Id=4001,
-                    MealId = 1001,
-                    ProductId = 5001,
-                    IngredientWeight = 30,
-                },
-                new Ingredient()
-                {
-                    Id=4002,
-                    MealId = 1001,
-                    ProductId = 5002,
-                    IngredientWeight = 40,
-                },
-            new Ingredient()
-                {
-                    Id=4003,
-                    MealId = 1001,
-                    ProductId = 5003,
-                    IngredientWeight = 50,
-                },
-            };
+           
 
             
           

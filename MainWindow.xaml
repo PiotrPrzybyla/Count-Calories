@@ -3,25 +3,52 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
         xmlns:local="clr-namespace:Count_Calories"
         mc:Ignorable="d"
         FontSize="18" FontFamily="Yu Gothic Light"
         Height="450" Width="800">
     <Grid>
-        <DockPanel Margin="0.2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <DockPanel Margin="20,60,20,0">
             <ListBox Name="mealsList" Width="600" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="0,2">
+                        <Grid Margin="2,2">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="20" />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Meal.Name}" />
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Column="1" Text="{Binding Name}" />
+                            <TextBlock Grid.Column="3" Text="{Binding Calories}" />
+                            <TextBlock Grid.Column="5" Text="{Binding Carbs}" />
+                            <TextBlock Grid.Column="7" Text="{Binding Fat}" />
+                            <TextBlock Grid.Column="9" Text="{Binding Protein}" />
+
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+        </DockPanel>
+        <DockPanel Grid.Row="1">
+            <Button Content="Open New Window" Click="OpenNewWindow_Click"/>
         </DockPanel>
     </Grid>
 </Window>

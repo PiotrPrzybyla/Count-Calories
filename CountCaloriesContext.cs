@@ -63,7 +63,25 @@ namespace Count_Calories
                     Carbs=5,
                     Fat = 600,
                     Protein=1,
-                }
+                },
+                new Product()
+                {
+                    Name="Pasta",
+                    Id=5002,
+                    Calories=500,
+                    Carbs=250,
+                    Fat = 1,
+                    Protein=5,
+                },
+                new Product()
+                {
+                    Name="Bacon",
+                    Id=5003,
+                    Calories=1000,
+                    Carbs=300,
+                    Fat = 600,
+                    Protein=1200,
+                }   
             };
             var ingredients = new List<Ingredient>
             {
@@ -73,17 +91,36 @@ namespace Count_Calories
                     MealId = 1001,
                     ProductId = 5001,
                     IngredientWeight = 30,
-                }
+                },
+                new Ingredient()
+                {
+                    Id=4002,
+                    MealId = 1001,
+                    ProductId = 5002,
+                    IngredientWeight = 40,
+                },
+            new Ingredient()
+                {
+                    Id=4003,
+                    MealId = 1001,
+                    ProductId = 5003,
+                    IngredientWeight = 50,
+                },
             };
 
-            userMeals.ForEach(s => context.UserMeals.Add(s));
+            
+          
 
             meals.ForEach(s => context.Meals.Add(s));
 
             products.ForEach(s => context.Products.Add(s));
 
             ingredients.ForEach(s => context.Ingredients.Add(s));
+
+            userMeals.ForEach(s => context.UserMeals.Add(s));
+
             context.SaveChanges();
+            
         }
     }
 }

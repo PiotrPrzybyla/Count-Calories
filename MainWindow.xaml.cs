@@ -13,15 +13,18 @@ namespace Count_Calories
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
+       
+       
 
         public MainWindow()
         {
             InitializeComponent();
-            List<Meal> meals;
-            List<UserMeal> userMeals;
-            List<Ingredient> ingredients;
-            List<Product> products;
-            List<MealUI> mealsUI = new List<MealUI>();
+        List<Meal> meals;
+         List<UserMeal> userMeals;
+         List<Ingredient> ingredients;
+         List<Product> products;
+        List<MealUI> mealsUI = new List<MealUI>();
 
             using (var context = new CountCaloriesContext())
             {
@@ -62,7 +65,8 @@ namespace Count_Calories
         private void OpenNewWindow_Click(object sender, RoutedEventArgs e)
         {
 
-            AddMeal newWindow = new AddMeal();
+            //AddMealWindow newWindow = new AddMealWindow(ourMeals.AddMeal(new Meal()));
+            AddMealWindow newWindow = new AddMealWindow(1);
             newWindow.Show();
         }
     }

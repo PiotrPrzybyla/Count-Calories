@@ -11,12 +11,12 @@ namespace Count_Calories
     {
         IEnumerable<Meal> GetAllMeals();
         Meal GetMealById(int id);
-        void AddMeal(Meal meal);
+        int AddMeal(Meal meal);
         void UpdateMeal(Meal meal);
         void DeleteMeal(int id);
     }
 
-    internal class MealRepository
+    public class MealRepository
     {
         private readonly CountCaloriesContext _dbContext;
 
@@ -35,10 +35,11 @@ namespace Count_Calories
             return _dbContext.Meals.FirstOrDefault(m => m.Id == id);
         }
 
-        public void AddMeal(Meal meal)
+        public int AddMeal(Meal meal)
         {
             _dbContext.Meals.Add(meal);
             _dbContext.SaveChanges();
+            return meal.Id;
         }
 
         public void UpdateMeal(Meal meal)

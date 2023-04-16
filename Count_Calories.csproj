@@ -67,8 +67,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddMeal.xaml.cs">
-      <DependentUpon>AddMeal.xaml</DependentUpon>
+    <Compile Include="AddMealWindow.xaml.cs">
+      <DependentUpon>AddMealWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ingredient.cs" />
     <Compile Include="MealRepository.cs" />
@@ -84,7 +84,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="UserMeal.cs" />
-    <Page Include="AddMeal.xaml">
+    <Page Include="AddMealWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

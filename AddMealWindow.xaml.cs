@@ -15,16 +15,15 @@ using System.Windows.Shapes;
 
 namespace Count_Calories
 {
-    /// <summary>
-    /// Logika interakcji dla klasy AddMeal.xaml
-    /// </summary>
     public partial class AddMealWindow : Window
     {
-        public int MealId { get; set; }
-        
+        private int MealId { get; set; }
+        private int UserMealId { get; set; }
         public List<Meal> meals;
         public List<Product> products;
         public Meal meal;
+        public UserMeal usermeal;
+        public UserMealRepository ourUserMeals = new UserMealRepository(new CountCaloriesContext());
         public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
 
         public AddMealWindow()
@@ -36,13 +35,19 @@ namespace Count_Calories
             CreateUI();
 
         }
+        public AddMealWindow(int mealID, int userMealID)
+        {
+            MealId=mealID;
+            UserMealId = userMealID;
+            InitializeComponent();
+            CreateUI();
+
+        }
 
         public AddMealWindow(int id)
         {
-        
             MealId = id;
             InitializeComponent();
-           
             CreateUI();
         }
         private void CreateUI()
@@ -58,7 +63,6 @@ namespace Count_Calories
 
             foreach (var ingredient in meal.Ingredients)
             {
-
                 MealUI mealUI = new MealUI();
                 Product product = products.Find(x => x.Id == ingredient.ProductId);
                 int weight = ingredient.IngredientWeight;
@@ -68,7 +72,6 @@ namespace Count_Calories
                 mealUI.Carbs += product.Carbs * weight / 100;
                 mealUI.Protein += product.Protein * weight / 100;
                 mealsUI.Add(mealUI);
-
             }
 
             ingredientsList.ItemsSource = mealsUI;
@@ -78,10 +81,7 @@ namespace Count_Calories
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string userInput = inputName.Text;
-
             meal.Name = userInput;
-           
-
         }
 
         private void AddIngredient(object sender, RoutedEventArgs e)
@@ -89,15 +89,36 @@ namespace Count_Calories
             AddIngredient addIngredient = new AddIngredient(MealId);
             addIngredient.Show();
             Close();
-
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        { 
-            ourMeals.UpdateMeal(meal);
-            MainWindow newWindow = new MainWindow();
-            newWindow.Show();
-            Close();
+        {
+            //try
+            //{
+            //    usermeal = ourUserMeals.GetUserMealById(UserMealId);
+            //    usermeal.MealId = MealId;
+            //    usermeal.Date = DateTime.Now;
+            //    ourUserMeals.UpdateUserMeal(usermeal);
+            //}
+            //catch 
+            //{
+
+            //}
+            //if (isExisting)
+            //{
+            //    ourUserMeals.UpdateUserMeal(usermeal);
+            //}
+            //else
+            //{
+            //    usermeal = new UserMeal();
+            //    usermeal.MealId = MealId;
+            //    usermeal.Date = DateTime.Now;
+            //    ourUserMeals.AddUserMeal(usermeal);
+            //}
+            //ourMeals.UpdateMeal(meal);
+            //MainWindow newWindow = new MainWindow();
+            //newWindow.Show();
+            //Close();
         }
     }
 }

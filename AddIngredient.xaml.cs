@@ -73,7 +73,7 @@ namespace Count_Calories
             ingredient.ProductId = product.Id;
             ingredient.MealId = MealId;
             ourIngredients.AddIngredient(ingredient);
-            AddMealWindow newWindow = new AddMealWindow();
+            AddMealWindow newWindow = new AddMealWindow(MealId);
             newWindow.Show();
             Close();
         }

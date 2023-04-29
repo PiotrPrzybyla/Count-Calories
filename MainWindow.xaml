@@ -10,8 +10,9 @@
         Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="350" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
 
         </Grid.RowDefinitions>
         <DockPanel Margin="20,60,20,0">
@@ -31,6 +32,7 @@
                                 <ColumnDefinition Width="20" />
                                 <ColumnDefinition Width="auto" />
                                 <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="0" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto" />
@@ -41,14 +43,18 @@
                             <TextBlock Grid.Column="5" Text="{Binding Carbs}" />
                             <TextBlock Grid.Column="7" Text="{Binding Fat}" />
                             <TextBlock Grid.Column="9" Text="{Binding Protein}" />
+                            <TextBlock Grid.Column="11" Text="{Binding ID}" />
+
 
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
-        <DockPanel Grid.Row="1">
-            <Button Content="Open New Window" Click="OpenNewWindow_Click"/>
-        </DockPanel>
+        <StackPanel Grid.Row="2">
+            <Button Content="Edit selected" Click="EditMeal"/>
+            <Button Content="Delete selected" Click="DeleteMeal"/>
+            <Button Content="Add Meal" Click="OpenNewWindow_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

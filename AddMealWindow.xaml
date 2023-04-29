@@ -42,6 +42,7 @@
                                 <TextBlock Grid.Column="5" Text="{Binding Carbs}" />
                                 <TextBlock Grid.Column="7" Text="{Binding Fat}" />
                                 <TextBlock Grid.Column="9" Text="{Binding Protein}" />
+                                <TextBlock Grid.Column="9" Text="{Binding MealId}" />
 
                             </Grid>
                         </DataTemplate>

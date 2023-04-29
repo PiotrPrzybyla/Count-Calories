@@ -14,17 +14,17 @@ namespace Count_Calories
     public partial class MainWindow : Window
     {
         public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
-       
-       
+        public UserMealRepository ourUserMeals = new UserMealRepository(new CountCaloriesContext());
+
 
         public MainWindow()
         {
             InitializeComponent();
-        List<Meal> meals;
-         List<UserMeal> userMeals;
-         List<Ingredient> ingredients;
-         List<Product> products;
-        List<MealUI> mealsUI = new List<MealUI>();
+            List<Meal> meals;
+            List<UserMeal> userMeals;
+            List<Ingredient> ingredients;
+            List<Product> products;
+            List<MealUI> mealsUI = new List<MealUI>();
 
             using (var context = new CountCaloriesContext())
             {
@@ -43,6 +43,7 @@ namespace Count_Calories
                 mealUI.Fat = 0;
                 mealUI.Carbs = 0;
                 mealUI.Protein = 0;
+                mealUI.ID = userMeal.MealId;
               
                 foreach (var ingredient in userMeal.Meal.Ingredients.ToList())
                 {
@@ -55,17 +56,26 @@ namespace Count_Calories
                 }
                 mealsUI.Add(mealUI);
             }
-
-            
             mealsList.ItemsSource = mealsUI;
-            
+        }
 
+        private void EditMeal(object sender, RoutedEventArgs e)
+        {
+
+            AddMealWindow newWindow = new AddMealWindow((mealsList.SelectedItem as MealUI).ID);
+            newWindow.Show();
+
+        }
+
+        private void DeleteMeal(object sender, RoutedEventArgs e)
+        {
+            ourUserMeals.DeleteUserMeal((mealsList.SelectedItem as MealUI).ID);
+            MainWindow newWindow = new MainWindow();
+            newWindow.Show();
         }
 
         private void OpenNewWindow_Click(object sender, RoutedEventArgs e)
         {
-
-            //AddMealWindow newWindow = new AddMealWindow(ourMeals.AddMeal(new Meal()));
             AddMealWindow newWindow = new AddMealWindow();
             newWindow.Show();
             Close();

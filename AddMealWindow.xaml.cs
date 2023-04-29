@@ -22,18 +22,31 @@ namespace Count_Calories
     {
         public int MealId { get; set; }
         
-        public string InputName { get; set; }
         public List<Meal> meals;
         public List<Product> products;
         public Meal meal;
         public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
 
+        public AddMealWindow()
+        {
+            InitializeComponent();
+            meal = new Meal();
+            ourMeals.AddMeal(meal);
+            MealId = meal.Id;
+            CreateUI();
+
+        }
+
         public AddMealWindow(int id)
         {
         
-         MealId = id;
+            MealId = id;
             InitializeComponent();
            
+            CreateUI();
+        }
+        private void CreateUI()
+        {
             List<MealUI> mealsUI = new List<MealUI>();
             using (var context = new CountCaloriesContext())
             {
@@ -41,7 +54,7 @@ namespace Count_Calories
                 products = context.Products.ToList();
             }
 
-           meal = meals.Find(m => m.Id == id);
+            meal = meals.Find(m => m.Id == MealId);
 
             foreach (var ingredient in meal.Ingredients)
             {
@@ -55,12 +68,13 @@ namespace Count_Calories
                 mealUI.Carbs += product.Carbs * weight / 100;
                 mealUI.Protein += product.Protein * weight / 100;
                 mealsUI.Add(mealUI);
-                
+
             }
-            
+
             ingredientsList.ItemsSource = mealsUI;
             inputName.Text = meal.Name;
         }
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string userInput = inputName.Text;
@@ -72,7 +86,7 @@ namespace Count_Calories
 
         private void AddIngredient(object sender, RoutedEventArgs e)
         {
-            AddIngredient addIngredient = new AddIngredient();
+            AddIngredient addIngredient = new AddIngredient(MealId);
             addIngredient.Show();
             Close();
 

@@ -66,7 +66,7 @@ namespace Count_Calories
         {
 
             //AddMealWindow newWindow = new AddMealWindow(ourMeals.AddMeal(new Meal()));
-            AddMealWindow newWindow = new AddMealWindow(1);
+            AddMealWindow newWindow = new AddMealWindow();
             newWindow.Show();
             Close();
         }

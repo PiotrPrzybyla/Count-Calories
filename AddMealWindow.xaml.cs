@@ -72,12 +72,18 @@ namespace Count_Calories
 
         private void AddIngredient(object sender, RoutedEventArgs e)
         {
-            ourMeals.UpdateMeal(meal);
+            AddIngredient addIngredient = new AddIngredient();
+            addIngredient.Show();
+            Close();
+
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             ourMeals.UpdateMeal(meal);
+            MainWindow newWindow = new MainWindow();
+            newWindow.Show();
+            Close();
         }
     }
 }

@@ -5,55 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Count_Calories"
         mc:Ignorable="d"
-        FontSize="18" FontFamily="Yu Gothic Light"
-        Title="EditMeal" Height="450" Width="800">
+        Title="EditMealWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="350" />
-            <RowDefinition Height="*" />
-
-        </Grid.RowDefinitions>
-        <DockPanel Margin="20,60,20,0">
-            <StackPanel Orientation="Vertical"  >
-                <TextBox x:Name="inputName"  Width="200" TextChanged="TextBox_TextChanged"/>
-                <ListBox Name="ingredientsList" Width="600" >
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Margin="2,2" >
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="20" />
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition Width="20" />
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition Width="20" />
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition Width="20" />
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition Width="20" />
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition Width="20" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto" />
-                                </Grid.RowDefinitions>
-
-                                <TextBlock Grid.Column="1" Text="{Binding Name}" />
-                                <TextBlock Grid.Column="3" Text="{Binding Calories}" />
-                                <TextBlock Grid.Column="5" Text="{Binding Carbs}" />
-                                <TextBlock Grid.Column="7" Text="{Binding Fat}" />
-                                <TextBlock Grid.Column="9" Text="{Binding Protein}" />
-                                <TextBlock Grid.Column="9" Text="{Binding MealId}" />
-
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-                <Button Content="Add Ingredient" Click="AddIngredient" Width="200"/>
-                <Button Content="Submit" Click="SubmitButton_Click" Width="200"/>
-            </StackPanel>
-        </DockPanel>
-        <DockPanel Grid.Row="1">
-            <Button Content="Open New Window" />
-        </DockPanel>
+        
     </Grid>
 </Window>

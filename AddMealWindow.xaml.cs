@@ -21,8 +21,6 @@ namespace Count_Calories
         public List<Meal> meals;
         public List<Product> products;
         public Meal meal;
-        public UserMeal usermeal;
-        public UserMealRepository ourUserMeals = new UserMealRepository(new CountCaloriesContext());
         public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
 
         public AddMealWindow()
@@ -83,12 +81,7 @@ namespace Count_Calories
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        {
-            usermeal = new UserMeal();
-            usermeal.MealId = MealId;
-            usermeal.Date = DateTime.Now;
-            ourUserMeals.AddUserMeal(usermeal);
-            
+        {            
             ourMeals.UpdateMeal(meal);
             MainWindow newWindow = new MainWindow();
             newWindow.Show();

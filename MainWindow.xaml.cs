@@ -10,15 +10,13 @@ namespace Count_Calories
 {
     public partial class MainWindow : Window
     {
-        //public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
-        public UserMealRepository ourUserMeals = new UserMealRepository(new CountCaloriesContext());
+        public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
 
 
         public MainWindow()
         {
             InitializeComponent();
             List<Meal> meals;
-            List<UserMeal> userMeals;
             List<Ingredient> ingredients;
             List<Product> products;
             List<MealUI> mealsUI = new List<MealUI>();
@@ -27,22 +25,21 @@ namespace Count_Calories
             {
                 ingredients = context.Ingredients.ToList();
                 meals = context.Meals.Include(m => m.Ingredients).ToList();
-                userMeals = context.UserMeals.ToList();
                 products = context.Products.ToList();
             }
 
-            foreach (var userMeal in userMeals)
+            foreach (var userMeal in meals)
             {
 
                 MealUI mealUI = new MealUI();
-                mealUI.Name = userMeal.Meal.Name;
+                mealUI.Name = userMeal.Name;
                 mealUI.Calories = 0;
                 mealUI.Fat = 0;
                 mealUI.Carbs = 0;
                 mealUI.Protein = 0;
                 mealUI.ID = userMeal.Id;
               
-                foreach (var ingredient in userMeal.Meal.Ingredients.ToList())
+                foreach (var ingredient in userMeal.Ingredients.ToList())
                 {
                     int weight = ingredient.IngredientWeight;
                     Product product = products.Find(x => x.Id == ingredient.ProductId);
@@ -59,14 +56,14 @@ namespace Count_Calories
         private void EditMeal(object sender, RoutedEventArgs e)
         {
 
-            EditMealWindow newWindow = new EditMealWindow((mealsList.SelectedItem as MealUI).ID);
-            newWindow.Show();
+            //EditMealWindow newWindow = new EditMealWindow((mealsList.SelectedItem as MealUI).ID);
+            //newWindow.Show();
 
         }
 
         private void DeleteMeal(object sender, RoutedEventArgs e)
         {
-            ourUserMeals.DeleteUserMeal((mealsList.SelectedItem as MealUI).ID);
+            ourMeals.DeleteMeal((mealsList.SelectedItem as MealUI).ID);
             MainWindow newWindow = new MainWindow();
             newWindow.Show();
         }

@@ -24,9 +24,5 @@ namespace Count_Calories
         public MealTypeENUM MealType { get; set; }
 
         public virtual Meal Meal { get; set; }
-
-
-
-
     }
 }

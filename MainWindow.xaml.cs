@@ -8,12 +8,9 @@ using System.Windows.Controls;
 
 namespace Count_Calories
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
+        //public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
         public UserMealRepository ourUserMeals = new UserMealRepository(new CountCaloriesContext());
 
 
@@ -43,7 +40,7 @@ namespace Count_Calories
                 mealUI.Fat = 0;
                 mealUI.Carbs = 0;
                 mealUI.Protein = 0;
-                mealUI.ID = userMeal.MealId;
+                mealUI.ID = userMeal.Id;
               
                 foreach (var ingredient in userMeal.Meal.Ingredients.ToList())
                 {
@@ -62,7 +59,7 @@ namespace Count_Calories
         private void EditMeal(object sender, RoutedEventArgs e)
         {
 
-            AddMealWindow newWindow = new AddMealWindow((mealsList.SelectedItem as MealUI).ID);
+            EditMealWindow newWindow = new EditMealWindow((mealsList.SelectedItem as MealUI).ID);
             newWindow.Show();
 
         }

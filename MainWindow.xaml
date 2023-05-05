@@ -11,33 +11,53 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
 
         </Grid.RowDefinitions>
-        <DockPanel Margin="20,60,20,0">
-            <ListBox Name="mealsList" Width="600" >
+        <Grid Width="600" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1" Text="Name" />
+            <TextBlock Grid.Column="3" Text="Calories" />
+            <TextBlock Grid.Column="5" Text="Carbs" />
+            <TextBlock Grid.Column="7" Text="Fat" />
+            <TextBlock Grid.Column="9" Text="Protein" />
+        </Grid>
+        <DockPanel Grid.Row="3" >
+
+            <ListBox Name="mealsList" Width="600" MinHeight="180">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Margin="2,2">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="20" />
-                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="160" />
                                 <ColumnDefinition Width="20" />
-                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="80" />
                                 <ColumnDefinition Width="20" />
-                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="80" />
                                 <ColumnDefinition Width="20" />
-                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="80" />
                                 <ColumnDefinition Width="20" />
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="0" />
                             </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                            </Grid.RowDefinitions>
-
                             <TextBlock Grid.Column="1" Text="{Binding Name}" />
                             <TextBlock Grid.Column="3" Text="{Binding Calories}" />
                             <TextBlock Grid.Column="5" Text="{Binding Carbs}" />
@@ -51,7 +71,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
-        <StackPanel Grid.Row="2">
+        <StackPanel Grid.Row="5">
             <Button Content="Edit selected" Click="EditMeal"/>
             <Button Content="Delete selected" Click="DeleteMeal"/>
             <Button Content="Add Meal" Click="OpenNewWindow_Click"/>

@@ -57,6 +57,7 @@ namespace Count_Calories
         {
             AddMealWindow newWindow = new AddMealWindow((mealsList.SelectedItem as MealUI).ID);
             newWindow.Show();
+            Close();
         }
 
         private void DeleteMeal(object sender, RoutedEventArgs e)
@@ -64,6 +65,7 @@ namespace Count_Calories
             ourMeals.DeleteMeal((mealsList.SelectedItem as MealUI).ID);
             MainWindow newWindow = new MainWindow();
             newWindow.Show();
+            Close();
         }
 
         private void OpenNewWindow_Click(object sender, RoutedEventArgs e)

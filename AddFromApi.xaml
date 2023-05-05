@@ -5,13 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Count_Calories"
         mc:Ignorable="d"
-        Title="AddFromApi" Height="170" Width="350">
+        Title="Add Ingredient from list" Height="170" Width="350">
     <Grid>
         <DockPanel Margin="10,25,10,10">
             <StackPanel Orientation="Vertical"  >
-                <Label Content="Name"  Target="{Binding ElementName=NameTextBox}"/>
-                <TextBox x:Name="NameTextBox"  Text="{Binding Name}" TextChanged="NameBox_TextChanged"/>
-                <Button Content="Add from list" Click="tryToFind" Width="100" Height="40"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="2" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="2" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="2" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" HorizontalContentAlignment="Center" Content="Name"  Target="{Binding ElementName=NameTextBox}"/>
+                    <TextBox Grid.Row="3" x:Name="NameTextBox"  Text="{Binding Name}" TextChanged="NameBox_TextChanged"/>
+                    <Button Grid.Row="5" Content="Add from list" Click="tryToFind" Width="100" Height="40"/>
+                </Grid>
             </StackPanel>
         </DockPanel>
         

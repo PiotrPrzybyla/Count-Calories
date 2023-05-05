@@ -55,10 +55,8 @@ namespace Count_Calories
 
         private void EditMeal(object sender, RoutedEventArgs e)
         {
-
-            //EditMealWindow newWindow = new EditMealWindow((mealsList.SelectedItem as MealUI).ID);
-            //newWindow.Show();
-
+            AddMealWindow newWindow = new AddMealWindow((mealsList.SelectedItem as MealUI).ID);
+            newWindow.Show();
         }
 
         private void DeleteMeal(object sender, RoutedEventArgs e)

@@ -17,6 +17,7 @@ namespace Count_Calories
     /// <summary>
     /// Logika interakcji dla klasy AddIngredient.xaml
     /// </summary>
+
     public partial class AddIngredient : Window
     {
         public int MealId { get; set; }
@@ -31,8 +32,23 @@ namespace Count_Calories
             InitializeComponent();
             product = new Product();
             ingredient = new Ingredient();
+        }
+
+        public AddIngredient(int mealID, Product readyProduct)
+        {
+            MealId = mealID;
+            product = readyProduct;
+            InitializeComponent();
+            NameTextBox.Text = product.Name;
+            CaloriesTextBox.Text = product.Calories.ToString();
+            CarbsTextBox.Text = product.Carbs.ToString();
+            FatTextBox.Text = product.Fat.ToString();
+            ProteinTextBox.Text = product.Protein.ToString();
+
+            ingredient = new Ingredient();
 
         }
+
         private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string productName = NameTextBox.Text;
@@ -41,12 +57,14 @@ namespace Count_Calories
 
         private void WeightBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int productWeight = int.Parse(WeightTextBox.Text);
+            int productWeight;
+            int.TryParse(WeightTextBox.Text, out productWeight);
             ingredient.IngredientWeight = productWeight;
         }
         private void CaloriesBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int productCalories = int.Parse(CaloriesTextBox.Text);
+            int productCalories;
+            int.TryParse(CaloriesTextBox.Text, out productCalories);
             product.Calories = productCalories;
         }
 
@@ -76,6 +94,14 @@ namespace Count_Calories
             AddMealWindow newWindow = new AddMealWindow(MealId);
             newWindow.Show();
             Close();
+        }
+
+        private void connectToApi(object sender, RoutedEventArgs e)
+        {
+            AddFromApi newWindow = new AddFromApi(MealId);
+            newWindow.Show();
+            Close();
+
         }
     }
 

@@ -42,15 +42,24 @@
                     <Label Content="Fat (100 g)" Grid.Column="1" Grid.Row="9" Target="{Binding ElementName=FatTextBox}"/>
                     <Label Content="Protein (100 g)" Grid.Column="1" Grid.Row="11" Target="{Binding ElementName=ProteinTextBox}"/>
 
-                    <TextBox x:Name="NameTextBox" Grid.Column="3" Grid.Row="1" Text="{Binding Name}" TextChanged="NameBox_TextChanged"/>
-                    <TextBox x:Name="WeightTextBox" Grid.Column="3" Grid.Row="3" Text="{Binding Weight}" TextChanged="WeightBox_TextChanged"/>
-                    <TextBox x:Name="CaloriesTextBox" Grid.Column="3" Grid.Row="5" Text="{Binding Calories}" TextChanged="CaloriesBox_TextChanged"/>
-                    <TextBox x:Name="CarbsTextBox" Grid.Column="3" Grid.Row="7" Text="{Binding Carbs}" TextChanged="CarbsBox_TextChanged"/>
-                    <TextBox x:Name="FatTextBox" Grid.Column="3" Grid.Row="9" Text="{Binding Fat}" TextChanged="FatBox_TextChanged"/>
-                    <TextBox x:Name="ProteinTextBox" Grid.Column="3" Grid.Row="11" Text="{Binding Protein}" TextChanged="ProteinBox_TextChanged"/>
+                    <TextBox x:Name="NameTextBox" Grid.Column="3" Grid.Row="1"  TextChanged="NameBox_TextChanged"/>
+                    <TextBox x:Name="WeightTextBox" Grid.Column="3" Grid.Row="3"  TextChanged="WeightBox_TextChanged"/>
+                    <TextBox x:Name="CaloriesTextBox" Grid.Column="3" Grid.Row="5"  TextChanged="CaloriesBox_TextChanged"/>
+                    <TextBox x:Name="CarbsTextBox" Grid.Column="3" Grid.Row="7"  TextChanged="CarbsBox_TextChanged"/>
+                    <TextBox x:Name="FatTextBox" Grid.Column="3" Grid.Row="9"  TextChanged="FatBox_TextChanged"/>
+                    <TextBox x:Name="ProteinTextBox" Grid.Column="3" Grid.Row="11"  TextChanged="ProteinBox_TextChanged"/>
 
                 </Grid>
-                <Button Content="Submit" Click="SubmitButton_Click" Width="200"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Submit" Grid.Column="1" Click="SubmitButton_Click" Width="150"/>
+                    <Button Content="Add from list" Grid.Column="2" Click="connectToApi" Width="150"/>
+                </Grid>
             </StackPanel>
         </DockPanel>
     </Grid>

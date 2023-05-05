@@ -9,7 +9,6 @@
         Title="AddMeal" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="350" />
             <RowDefinition Height="*" />
 
         </Grid.RowDefinitions>
@@ -51,9 +50,6 @@
                 <Button Content="Add Ingredient" Click="AddIngredient" Width="200"/>
                 <Button Content="Submit" Click="SubmitButton_Click" Width="200"/>
             </StackPanel>
-        </DockPanel>
-        <DockPanel Grid.Row="1">
-            <Button Content="Open New Window" />
         </DockPanel>
     </Grid>
 </Window>

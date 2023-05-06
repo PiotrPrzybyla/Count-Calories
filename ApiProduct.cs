@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa przechowująca wszystkie informacje o produkcie pobranym z API.
+    /// </summary>
     internal class ApiProduct
     {
-        public ApiProduct() { }
-
         public string name;
         public double calories;
         public double serving_size_g;

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Interfejs repozytoria posiłków.
+    /// </summary>
     public interface IMealRepository
     {
         IEnumerable<Meal> GetAllMeals();
@@ -16,6 +19,9 @@ namespace Count_Calories
         void DeleteMeal(int id);
     }
 
+    /// <summary>
+    /// Klasa do operacji CRUD-owych na posiłkach.
+    /// </summary>
     public class MealRepository
     {
         private readonly CountCaloriesContext _dbContext;

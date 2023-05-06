@@ -80,9 +80,6 @@
       <DependentUpon>AddMealWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ApiProduct.cs" />
-    <Compile Include="EditMealWindow.xaml.cs">
-      <DependentUpon>EditMealWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Ingredient.cs" />
     <Compile Include="IngredientRepository.cs" />
     <Compile Include="MealRepository.cs" />
@@ -112,10 +109,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddMealWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EditMealWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

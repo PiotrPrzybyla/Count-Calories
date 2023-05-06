@@ -16,7 +16,7 @@ using static System.Net.WebRequestMethods;
 namespace Count_Calories
 {
     /// <summary>
-    /// Logika interakcji dla klasy AddFromApi.xaml
+    /// Klasa obsługująca zapytania do API.
     /// </summary>
     public partial class AddFromApi : Window
     {
@@ -26,18 +26,32 @@ namespace Count_Calories
         Product readyProduct;
         int mealId;
 
+        /// <summary>
+        /// Konstruktor służący do inicjalizacji okna.
+        /// </summary>
+        /// <param name="mealId">ID posiłku do którego dodajemy produkt.</param>
         public AddFromApi(int mealId)
         {
             this.mealId = mealId;
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Metoda na bieżąco zmieniająca nazwę produktu przy edycji odpowiadającego metodzie pola tekstowego.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string productName = NameTextBox.Text;
             name = productName;
         }
 
+        /// <summary>
+        /// Metoda szuka po API odpowiadającego produktu i otwiera okno AddIngredient uzupełniając odpowiednie pola tekstowe wartościami makro.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private async void tryToFind(object sender, RoutedEventArgs e)
         {
             api = new ShootAPI();

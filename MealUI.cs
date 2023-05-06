@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa przechowująca model UI posiłku (nazwa lekko myląca, prechowuje również model składnika).
+    /// </summary>
     internal class MealUI
     {
         public string Name { get; set; }

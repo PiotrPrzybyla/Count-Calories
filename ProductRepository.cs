@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Interfejs repozytoria produktów.
+    /// </summary>
     public interface IProductRepository
     {
         IEnumerable<Product> GetAllProducts();
@@ -15,6 +18,10 @@ namespace Count_Calories
         void UpdateProduct(Product Product);
         void DeleteProduct(int id);
     }
+
+    /// <summary>
+    /// Klasa do operacji CRUD-owych na produktach.
+    /// </summary>
     public class ProductRepository
     {
         private readonly CountCaloriesContext _dbContext;

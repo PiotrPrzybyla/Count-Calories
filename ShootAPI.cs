@@ -10,8 +10,17 @@ using System.Threading.Tasks;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa obsługująca zapytania do API.
+    /// </summary>
     internal class ShootAPI
     {
+        /// <summary>
+        /// Metoda wysyłająca zapytanie do API.
+        /// </summary>
+        /// <param name="apiUrl">Adres url API.</param>
+        /// <param name="apiKey">Klucz do API.</param>
+        /// <returns>Model ApiProduct z API.</returns>
         public async Task<ApiProduct> GetDataFromApiAsync(string apiUrl, string apiKey)
         {
             using (var httpClient = new HttpClient())

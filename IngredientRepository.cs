@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Interfejs repozytoria składników.
+    /// </summary>
     public interface IIngredientRepository
     {
         IEnumerable<Ingredient> GetAllIngredients();
@@ -15,6 +18,10 @@ namespace Count_Calories
         void UpdateIngredient(Ingredient Ingredient);
         void DeleteIngredient(int id);
     }
+
+    /// <summary>
+    /// Klasa do operacji CRUD-owych na składnikach.
+    /// </summary>
     public class IngredientRepository
     {
         private readonly CountCaloriesContext _dbContext;

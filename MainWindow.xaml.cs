@@ -8,11 +8,18 @@ using System.Windows.Controls;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa obsługująca główne okno aplikacji.
+    /// </summary>
     public partial class MainWindow : Window
     {
         public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
 
-
+        /// <summary>
+        /// Konstruktor inicjalizujący okno.
+        /// Tworzenie panelu UI, który będzie później wyświetlany.
+        /// Przeszukanie bazy danych i wyświetlenie znalezionych posiłków.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -53,6 +60,11 @@ namespace Count_Calories
             mealsList.ItemsSource = mealsUI;
         }
 
+        /// <summary>
+        /// Metoda otwiera okno AddMeal, równocześnie przekazując mu ID posiłku do edycji.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private void EditMeal(object sender, RoutedEventArgs e)
         {
             AddMealWindow newWindow = new AddMealWindow((mealsList.SelectedItem as MealUI).ID);
@@ -60,6 +72,11 @@ namespace Count_Calories
             Close();
         }
 
+        /// <summary>
+        /// Metoda otwiera okno główne, równocześnie usuwając wybrany posiłek.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private void DeleteMeal(object sender, RoutedEventArgs e)
         {
             ourMeals.DeleteMeal((mealsList.SelectedItem as MealUI).ID);
@@ -68,6 +85,11 @@ namespace Count_Calories
             Close();
         }
 
+        /// <summary>
+        /// Metoda otwiera okno AddMeal, w celu dodania nowego posiłku.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private void OpenNewWindow_Click(object sender, RoutedEventArgs e)
         {
             AddMealWindow newWindow = new AddMealWindow();

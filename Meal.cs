@@ -2,6 +2,9 @@
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa przechowująca model posiłku.
+    /// </summary>
     public class Meal
     {
         public int Id { get; set; }

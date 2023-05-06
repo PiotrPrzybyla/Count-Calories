@@ -2,6 +2,9 @@
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa przechowująca model składnika.
+    /// </summary>
     public class Ingredient
     {
         public int Id { get; set; }

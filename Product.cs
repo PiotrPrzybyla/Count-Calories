@@ -2,6 +2,9 @@
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa przechowująca model produktu.
+    /// </summary>
     public class Product
     {
         public int Calories { get; set; }

@@ -23,6 +23,9 @@ namespace Count_Calories
         public Meal meal;
         public MealRepository ourMeals = new MealRepository(new CountCaloriesContext());
 
+        /// <summary>
+        /// Konstruktor służący do inicjalizacji okna dla nowego posiłku.
+        /// </summary>
         public AddMealWindow()
         {
             InitializeComponent();
@@ -32,13 +35,21 @@ namespace Count_Calories
             CreateUI();
 
         }
-
+        /// <summary>
+        /// Konstruktor służący do inicjalizacji okna dla istniejącego posiłku.
+        /// </summary>
+        /// <param name="id">ID do edycji istniejącego posiłku</param>
         public AddMealWindow(int id)
         {
             MealId = id;
             InitializeComponent();
             CreateUI();
         }
+
+        /// <summary>
+        /// Tworzenie panelu UI, który będzie później wyświetlany.
+        /// Przeszukanie bazy danych po MealId i przypisanie makro na podstawie zaczerpniętych informacji.
+        /// </summary>
         private void CreateUI()
         {
             List<MealUI> mealsUI = new List<MealUI>();
@@ -67,12 +78,22 @@ namespace Count_Calories
             inputName.Text = meal.Name;
         }
 
+        /// <summary>
+        /// Metoda na bieżąco zmieniająca nazwę składnika przy edycji odpowiadającego metodzie pola tekstowego.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string userInput = inputName.Text;
             meal.Name = userInput;
         }
 
+        /// <summary>
+        /// Metoda otwiera okno AddIngredient w celu dodania nowego składnika.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private void AddIngredient(object sender, RoutedEventArgs e)
         {
             AddIngredient addIngredient = new AddIngredient(MealId);
@@ -80,6 +101,11 @@ namespace Count_Calories
             Close();
         }
 
+        /// <summary>
+        /// Metoda uaktualnia posiłek w bazie, następnie otwiera okno główne uzupełnione o ten posiłek.
+        /// </summary>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Argument zdarzenia zawierające szczegółowe informacje na jego temat</param>
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {            
             ourMeals.UpdateMeal(meal);

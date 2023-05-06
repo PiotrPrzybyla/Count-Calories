@@ -23,7 +23,11 @@ namespace Count_Calories
                 {
                     var jsonResponse = await response.Content.ReadAsStringAsync();
                     var data = JsonConvert.DeserializeObject<List<ApiProduct>>(jsonResponse);
-                    return data.First();
+                    if (data.Count != 0) {
+                        return data.First();
+                    } return new ApiProduct();
+
+                    
                 }
                 else
                 {

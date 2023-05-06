@@ -1,0 +1,245 @@
+\hypertarget{class_count___calories_1_1_add_ingredient}{}\doxysection{Count\+\_\+\+Calories.\+Add\+Ingredient Class Reference}
+\label{class_count___calories_1_1_add_ingredient}\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+
+
+Klasa obsługująca okno do dodawania składników.  
+
+
+Inheritance diagram for Count\+\_\+\+Calories.\+Add\+Ingredient\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_count___calories_1_1_add_ingredient}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_count___calories_1_1_add_ingredient_a7518294ef0e2d2f69245a55805c50e6f}{Add\+Ingredient}} (int meal\+ID)
+\begin{DoxyCompactList}\small\item\em Konstruktor służący do dodania składnika w sposób podstawowy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_count___calories_1_1_add_ingredient_a1bb3342cf382530ee29c3986920eb257}{Add\+Ingredient}} (int meal\+ID, \mbox{\hyperlink{class_count___calories_1_1_product}{Product}} ready\+Product)
+\begin{DoxyCompactList}\small\item\em Konstruktor służący do dodania składnika gdy chcemy skorzystać z API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_a436a93813618dc60624336dc9bb0da8a}\label{class_count___calories_1_1_add_ingredient_a436a93813618dc60624336dc9bb0da8a}} 
+\mbox{\hyperlink{class_count___calories_1_1_product_repository}{Product\+Repository}} {\bfseries our\+Products} = new \mbox{\hyperlink{class_count___calories_1_1_product_repository}{Product\+Repository}}(new \mbox{\hyperlink{class_count___calories_1_1_count_calories_context}{Count\+Calories\+Context}}())
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_a8bf9dcf9c17a796965ee47d121ded531}\label{class_count___calories_1_1_add_ingredient_a8bf9dcf9c17a796965ee47d121ded531}} 
+\mbox{\hyperlink{class_count___calories_1_1_ingredient_repository}{Ingredient\+Repository}} {\bfseries our\+Ingredients} = new \mbox{\hyperlink{class_count___calories_1_1_ingredient_repository}{Ingredient\+Repository}}(new \mbox{\hyperlink{class_count___calories_1_1_count_calories_context}{Count\+Calories\+Context}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_ab861366f953b9f09f6f391bb2155f355}\label{class_count___calories_1_1_add_ingredient_ab861366f953b9f09f6f391bb2155f355}} 
+int {\bfseries Meal\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_ae574cdc9a51ad19d772a7f4b94eac882}{Name\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca nazwę składnika przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_a2f5a8b91b8eaabb3f0cc4b09c6e65b6d}{Weight\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca wagę składnika przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_afa9c1ad1456f15f16281f9353961b306}{Calories\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca liczbę kalorii składnika przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_a7463a9a02255cb14d0ae4faff42bb251}{Carbs\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca zawartość węgli składnika przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_af409bda0458b5cb59eb3457ba2ec9552}{Fat\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca zawartość tłuszczu składnika przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_abd352dcb6c7a1f0f178617e4a77f7ebf}{Protein\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca zawartość białka składnika przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_aa2e5d8fdaa823afda3c41e39515a0263}{Submit\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda dodająca składnik do posiłku, otwierająca nowe okno Add\+Meal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_ingredient_ae1c14dd16f34b09d7c277114b87504a0}{connect\+To\+Api}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda otwierająca okno umożliwiające dodanie składniku z API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_a31f64cdac34e22b32e8c62d1790d9990}\label{class_count___calories_1_1_add_ingredient_a31f64cdac34e22b32e8c62d1790d9990}} 
+\mbox{\hyperlink{class_count___calories_1_1_ingredient}{Ingredient}} {\bfseries ingredient}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_ad9d66db27d3a836f977a729920220261}\label{class_count___calories_1_1_add_ingredient_ad9d66db27d3a836f977a729920220261}} 
+\mbox{\hyperlink{class_count___calories_1_1_product}{Product}} {\bfseries product}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa obsługująca okno do dodawania składników. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_a7518294ef0e2d2f69245a55805c50e6f}\label{class_count___calories_1_1_add_ingredient_a7518294ef0e2d2f69245a55805c50e6f}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!AddIngredient@{AddIngredient}}
+\index{AddIngredient@{AddIngredient}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{AddIngredient()}{AddIngredient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Count\+\_\+\+Calories.\+Add\+Ingredient.\+Add\+Ingredient (\begin{DoxyParamCaption}\item[{int}]{meal\+ID }\end{DoxyParamCaption})}
+
+
+
+Konstruktor służący do dodania składnika w sposób podstawowy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal\+Id} & ID posiłku do którego dodajemy składnik.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_a1bb3342cf382530ee29c3986920eb257}\label{class_count___calories_1_1_add_ingredient_a1bb3342cf382530ee29c3986920eb257}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!AddIngredient@{AddIngredient}}
+\index{AddIngredient@{AddIngredient}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{AddIngredient()}{AddIngredient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Count\+\_\+\+Calories.\+Add\+Ingredient.\+Add\+Ingredient (\begin{DoxyParamCaption}\item[{int}]{meal\+ID,  }\item[{\mbox{\hyperlink{class_count___calories_1_1_product}{Product}}}]{ready\+Product }\end{DoxyParamCaption})}
+
+
+
+Konstruktor służący do dodania składnika gdy chcemy skorzystać z API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal\+Id} & ID posiłku do którego dodajemy składnik.\\
+\hline
+{\em ready\+Product} & Produkt pobrany z API.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_afa9c1ad1456f15f16281f9353961b306}\label{class_count___calories_1_1_add_ingredient_afa9c1ad1456f15f16281f9353961b306}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!CaloriesBox\_TextChanged@{CaloriesBox\_TextChanged}}
+\index{CaloriesBox\_TextChanged@{CaloriesBox\_TextChanged}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{CaloriesBox\_TextChanged()}{CaloriesBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+Calories\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca liczbę kalorii składnika przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_a7463a9a02255cb14d0ae4faff42bb251}\label{class_count___calories_1_1_add_ingredient_a7463a9a02255cb14d0ae4faff42bb251}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!CarbsBox\_TextChanged@{CarbsBox\_TextChanged}}
+\index{CarbsBox\_TextChanged@{CarbsBox\_TextChanged}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{CarbsBox\_TextChanged()}{CarbsBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+Carbs\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca zawartość węgli składnika przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_ae1c14dd16f34b09d7c277114b87504a0}\label{class_count___calories_1_1_add_ingredient_ae1c14dd16f34b09d7c277114b87504a0}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!connectToApi@{connectToApi}}
+\index{connectToApi@{connectToApi}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{connectToApi()}{connectToApi()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+connect\+To\+Api (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda otwierająca okno umożliwiające dodanie składniku z API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_af409bda0458b5cb59eb3457ba2ec9552}\label{class_count___calories_1_1_add_ingredient_af409bda0458b5cb59eb3457ba2ec9552}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!FatBox\_TextChanged@{FatBox\_TextChanged}}
+\index{FatBox\_TextChanged@{FatBox\_TextChanged}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{FatBox\_TextChanged()}{FatBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+Fat\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca zawartość tłuszczu składnika przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_ae574cdc9a51ad19d772a7f4b94eac882}\label{class_count___calories_1_1_add_ingredient_ae574cdc9a51ad19d772a7f4b94eac882}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!NameBox\_TextChanged@{NameBox\_TextChanged}}
+\index{NameBox\_TextChanged@{NameBox\_TextChanged}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{NameBox\_TextChanged()}{NameBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+Name\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca nazwę składnika przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_abd352dcb6c7a1f0f178617e4a77f7ebf}\label{class_count___calories_1_1_add_ingredient_abd352dcb6c7a1f0f178617e4a77f7ebf}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!ProteinBox\_TextChanged@{ProteinBox\_TextChanged}}
+\index{ProteinBox\_TextChanged@{ProteinBox\_TextChanged}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{ProteinBox\_TextChanged()}{ProteinBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+Protein\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca zawartość białka składnika przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_aa2e5d8fdaa823afda3c41e39515a0263}\label{class_count___calories_1_1_add_ingredient_aa2e5d8fdaa823afda3c41e39515a0263}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!SubmitButton\_Click@{SubmitButton\_Click}}
+\index{SubmitButton\_Click@{SubmitButton\_Click}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{SubmitButton\_Click()}{SubmitButton\_Click()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+Submit\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda dodająca składnik do posiłku, otwierająca nowe okno Add\+Meal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_ingredient_a2f5a8b91b8eaabb3f0cc4b09c6e65b6d}\label{class_count___calories_1_1_add_ingredient_a2f5a8b91b8eaabb3f0cc4b09c6e65b6d}} 
+\index{Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}!WeightBox\_TextChanged@{WeightBox\_TextChanged}}
+\index{WeightBox\_TextChanged@{WeightBox\_TextChanged}!Count\_Calories.AddIngredient@{Count\_Calories.AddIngredient}}
+\doxysubsubsection{\texorpdfstring{WeightBox\_TextChanged()}{WeightBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Ingredient.\+Weight\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca wagę składnika przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projects/\+Count-\/\+Calories/Add\+Ingredient.\+xaml.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\hypertarget{class_count___calories_1_1_add_meal_window}{}\doxysection{Count\+\_\+\+Calories.\+Add\+Meal\+Window Class Reference}
+\label{class_count___calories_1_1_add_meal_window}\index{Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}}
+
+
+Klasa obsługująca okno aplikacji służące do dodawania posiłku.  
+
+
+Inheritance diagram for Count\+\_\+\+Calories.\+Add\+Meal\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_count___calories_1_1_add_meal_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_ab45a15b989c55b3a1897108937e57876}\label{class_count___calories_1_1_add_meal_window_ab45a15b989c55b3a1897108937e57876}} 
+{\bfseries Add\+Meal\+Window} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor służący do inicjalizacji okna dla nowego posiłku. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_count___calories_1_1_add_meal_window_a3459855a55e1f696ea76da99f85a1f55}{Add\+Meal\+Window}} (int id)
+\begin{DoxyCompactList}\small\item\em Konstruktor służący do inicjalizacji okna dla istniejącego posiłku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_a54af3c514b9debc49e2fdc2125a4c1cf}\label{class_count___calories_1_1_add_meal_window_a54af3c514b9debc49e2fdc2125a4c1cf}} 
+List$<$ \mbox{\hyperlink{class_count___calories_1_1_meal}{Meal}} $>$ {\bfseries meals}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_abfad8b7bc83d162cea8376605218ad27}\label{class_count___calories_1_1_add_meal_window_abfad8b7bc83d162cea8376605218ad27}} 
+List$<$ \mbox{\hyperlink{class_count___calories_1_1_product}{Product}} $>$ {\bfseries products}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_a21bc6fa9f4615c608ad8a1d68ba9ef6b}\label{class_count___calories_1_1_add_meal_window_a21bc6fa9f4615c608ad8a1d68ba9ef6b}} 
+\mbox{\hyperlink{class_count___calories_1_1_meal}{Meal}} {\bfseries meal}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_a05c6ee67093b9d4be607ac61ba1f6f7e}\label{class_count___calories_1_1_add_meal_window_a05c6ee67093b9d4be607ac61ba1f6f7e}} 
+\mbox{\hyperlink{class_count___calories_1_1_meal_repository}{Meal\+Repository}} {\bfseries our\+Meals} = new \mbox{\hyperlink{class_count___calories_1_1_meal_repository}{Meal\+Repository}}(new \mbox{\hyperlink{class_count___calories_1_1_count_calories_context}{Count\+Calories\+Context}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_adac0058f5a1412c5ba6add6bbc53f7fd}\label{class_count___calories_1_1_add_meal_window_adac0058f5a1412c5ba6add6bbc53f7fd}} 
+int {\bfseries Meal\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_a9e4afba46132dc80395e09ad791c4a91}\label{class_count___calories_1_1_add_meal_window_a9e4afba46132dc80395e09ad791c4a91}} 
+void {\bfseries Create\+UI} ()
+\begin{DoxyCompactList}\small\item\em Tworzenie panelu UI, który będzie później wyświetlany. Przeszukanie bazy danych po Meal\+Id i przypisanie makro na podstawie zaczerpniętych informacji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_meal_window_a2fbbfb3761f1ee18b978d8e77a6f612a}{Text\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca nazwę składnika przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_meal_window_ae7a8ee8d2706e231bc17f792f4c2a959}{Add\+Ingredient}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda otwiera okno Add\+Ingredient w celu dodania nowego składnika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_meal_window_a730589b0c7991eecf82228b7c84c0f0d}{Submit\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda uaktualnia posiłek w bazie, następnie otwiera okno główne uzupełnione o ten posiłek. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa obsługująca okno aplikacji służące do dodawania posiłku. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_a3459855a55e1f696ea76da99f85a1f55}\label{class_count___calories_1_1_add_meal_window_a3459855a55e1f696ea76da99f85a1f55}} 
+\index{Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}!AddMealWindow@{AddMealWindow}}
+\index{AddMealWindow@{AddMealWindow}!Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}}
+\doxysubsubsection{\texorpdfstring{AddMealWindow()}{AddMealWindow()}}
+{\footnotesize\ttfamily Count\+\_\+\+Calories.\+Add\+Meal\+Window.\+Add\+Meal\+Window (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Konstruktor służący do inicjalizacji okna dla istniejącego posiłku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID do edycji istniejącego posiłku\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_ae7a8ee8d2706e231bc17f792f4c2a959}\label{class_count___calories_1_1_add_meal_window_ae7a8ee8d2706e231bc17f792f4c2a959}} 
+\index{Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}!AddIngredient@{AddIngredient}}
+\index{AddIngredient@{AddIngredient}!Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}}
+\doxysubsubsection{\texorpdfstring{AddIngredient()}{AddIngredient()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Meal\+Window.\+Add\+Ingredient (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda otwiera okno Add\+Ingredient w celu dodania nowego składnika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_a730589b0c7991eecf82228b7c84c0f0d}\label{class_count___calories_1_1_add_meal_window_a730589b0c7991eecf82228b7c84c0f0d}} 
+\index{Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}!SubmitButton\_Click@{SubmitButton\_Click}}
+\index{SubmitButton\_Click@{SubmitButton\_Click}!Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}}
+\doxysubsubsection{\texorpdfstring{SubmitButton\_Click()}{SubmitButton\_Click()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Meal\+Window.\+Submit\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda uaktualnia posiłek w bazie, następnie otwiera okno główne uzupełnione o ten posiłek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_meal_window_a2fbbfb3761f1ee18b978d8e77a6f612a}\label{class_count___calories_1_1_add_meal_window_a2fbbfb3761f1ee18b978d8e77a6f612a}} 
+\index{Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}!TextBox\_TextChanged@{TextBox\_TextChanged}}
+\index{TextBox\_TextChanged@{TextBox\_TextChanged}!Count\_Calories.AddMealWindow@{Count\_Calories.AddMealWindow}}
+\doxysubsubsection{\texorpdfstring{TextBox\_TextChanged()}{TextBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+Meal\+Window.\+Text\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca nazwę składnika przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projects/\+Count-\/\+Calories/Add\+Meal\+Window.\+xaml.\+cs\end{DoxyCompactItemize}

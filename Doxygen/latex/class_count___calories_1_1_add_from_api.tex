@@ -1,0 +1,106 @@
+\hypertarget{class_count___calories_1_1_add_from_api}{}\doxysection{Count\+\_\+\+Calories.\+Add\+From\+Api Class Reference}
+\label{class_count___calories_1_1_add_from_api}\index{Count\_Calories.AddFromApi@{Count\_Calories.AddFromApi}}
+
+
+Klasa obsługująca zapytania do API.  
+
+
+Inheritance diagram for Count\+\_\+\+Calories.\+Add\+From\+Api\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_count___calories_1_1_add_from_api}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_count___calories_1_1_add_from_api_a481af961495659dd8ccc0c2bc7e50673}{Add\+From\+Api}} (int meal\+Id)
+\begin{DoxyCompactList}\small\item\em Konstruktor służący do inicjalizacji okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_count___calories_1_1_add_from_api_a2125233b5d40a525d318f0f351cdb69f}{Name\+Box\+\_\+\+Text\+Changed}} (object sender, Text\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda na bieżąco zmieniająca nazwę produktu przy edycji odpowiadającego metodzie pola tekstowego. \end{DoxyCompactList}\item 
+async void \mbox{\hyperlink{class_count___calories_1_1_add_from_api_a9887a1379d43237a0443cd0c1f40c1db}{try\+To\+Find}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda szuka po API odpowiadającego produktu i otwiera okno Add\+Ingredient uzupełniając odpowiednie pola tekstowe wartościami makro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_abc529d7a34cfec2ec9278e94b1bd9332}\label{class_count___calories_1_1_add_from_api_abc529d7a34cfec2ec9278e94b1bd9332}} 
+string {\bfseries name}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_a036b00b67bcdbf2fd7faa6874ae376ef}\label{class_count___calories_1_1_add_from_api_a036b00b67bcdbf2fd7faa6874ae376ef}} 
+Shoot\+API {\bfseries api}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_a3597bd8caf06ee7937602a172d75952b}\label{class_count___calories_1_1_add_from_api_a3597bd8caf06ee7937602a172d75952b}} 
+Api\+Product {\bfseries product\+Data}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_aac21c8e0d8663f77fc440b19fccb577e}\label{class_count___calories_1_1_add_from_api_aac21c8e0d8663f77fc440b19fccb577e}} 
+\mbox{\hyperlink{class_count___calories_1_1_product}{Product}} {\bfseries ready\+Product}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_a6350e1cc724fe7eb8a9619723abc6ade}\label{class_count___calories_1_1_add_from_api_a6350e1cc724fe7eb8a9619723abc6ade}} 
+int {\bfseries meal\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa obsługująca zapytania do API. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_a481af961495659dd8ccc0c2bc7e50673}\label{class_count___calories_1_1_add_from_api_a481af961495659dd8ccc0c2bc7e50673}} 
+\index{Count\_Calories.AddFromApi@{Count\_Calories.AddFromApi}!AddFromApi@{AddFromApi}}
+\index{AddFromApi@{AddFromApi}!Count\_Calories.AddFromApi@{Count\_Calories.AddFromApi}}
+\doxysubsubsection{\texorpdfstring{AddFromApi()}{AddFromApi()}}
+{\footnotesize\ttfamily Count\+\_\+\+Calories.\+Add\+From\+Api.\+Add\+From\+Api (\begin{DoxyParamCaption}\item[{int}]{meal\+Id }\end{DoxyParamCaption})}
+
+
+
+Konstruktor służący do inicjalizacji okna. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal\+Id} & ID posiłku do którego dodajemy produkt.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_a2125233b5d40a525d318f0f351cdb69f}\label{class_count___calories_1_1_add_from_api_a2125233b5d40a525d318f0f351cdb69f}} 
+\index{Count\_Calories.AddFromApi@{Count\_Calories.AddFromApi}!NameBox\_TextChanged@{NameBox\_TextChanged}}
+\index{NameBox\_TextChanged@{NameBox\_TextChanged}!Count\_Calories.AddFromApi@{Count\_Calories.AddFromApi}}
+\doxysubsubsection{\texorpdfstring{NameBox\_TextChanged()}{NameBox\_TextChanged()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Add\+From\+Api.\+Name\+Box\+\_\+\+Text\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Text\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda na bieżąco zmieniająca nazwę produktu przy edycji odpowiadającego metodzie pola tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_add_from_api_a9887a1379d43237a0443cd0c1f40c1db}\label{class_count___calories_1_1_add_from_api_a9887a1379d43237a0443cd0c1f40c1db}} 
+\index{Count\_Calories.AddFromApi@{Count\_Calories.AddFromApi}!tryToFind@{tryToFind}}
+\index{tryToFind@{tryToFind}!Count\_Calories.AddFromApi@{Count\_Calories.AddFromApi}}
+\doxysubsubsection{\texorpdfstring{tryToFind()}{tryToFind()}}
+{\footnotesize\ttfamily async void Count\+\_\+\+Calories.\+Add\+From\+Api.\+try\+To\+Find (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda szuka po API odpowiadającego produktu i otwiera okno Add\+Ingredient uzupełniając odpowiednie pola tekstowe wartościami makro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projects/\+Count-\/\+Calories/Add\+From\+Api.\+xaml.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\hypertarget{class_count___calories_1_1_main_window}{}\doxysection{Count\+\_\+\+Calories.\+Main\+Window Class Reference}
+\label{class_count___calories_1_1_main_window}\index{Count\_Calories.MainWindow@{Count\_Calories.MainWindow}}
+
+
+Klasa obsługująca główne okno aplikacji.  
+
+
+Inheritance diagram for Count\+\_\+\+Calories.\+Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_count___calories_1_1_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_main_window_afc4648ff9734c697496e965527a4e09c}\label{class_count___calories_1_1_main_window_afc4648ff9734c697496e965527a4e09c}} 
+{\bfseries Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor inicjalizujący okno. Tworzenie panelu UI, który będzie później wyświetlany. Przeszukanie bazy danych i wyświetlenie znalezionych posiłków. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_count___calories_1_1_main_window_a47a3d294cfaf3410beeebf7c6d53c10e}\label{class_count___calories_1_1_main_window_a47a3d294cfaf3410beeebf7c6d53c10e}} 
+\mbox{\hyperlink{class_count___calories_1_1_meal_repository}{Meal\+Repository}} {\bfseries our\+Meals} = new \mbox{\hyperlink{class_count___calories_1_1_meal_repository}{Meal\+Repository}}(new \mbox{\hyperlink{class_count___calories_1_1_count_calories_context}{Count\+Calories\+Context}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_count___calories_1_1_main_window_ad471f0ebacbfb63024121b772c1cb33c}{Edit\+Meal}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda otwiera okno Add\+Meal, równocześnie przekazując mu ID posiłku do edycji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_main_window_a9470627a621f0e6f1b34a8f587ddaa2f}{Delete\+Meal}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda otwiera okno główne, równocześnie usuwając wybrany posiłek. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_count___calories_1_1_main_window_a294ddb8ecb94d041f3377cfe6b1b8077}{Open\+New\+Window\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda otwiera okno Add\+Meal, w celu dodania nowego posiłku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa obsługująca główne okno aplikacji. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_count___calories_1_1_main_window_a9470627a621f0e6f1b34a8f587ddaa2f}\label{class_count___calories_1_1_main_window_a9470627a621f0e6f1b34a8f587ddaa2f}} 
+\index{Count\_Calories.MainWindow@{Count\_Calories.MainWindow}!DeleteMeal@{DeleteMeal}}
+\index{DeleteMeal@{DeleteMeal}!Count\_Calories.MainWindow@{Count\_Calories.MainWindow}}
+\doxysubsubsection{\texorpdfstring{DeleteMeal()}{DeleteMeal()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Main\+Window.\+Delete\+Meal (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda otwiera okno główne, równocześnie usuwając wybrany posiłek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_main_window_ad471f0ebacbfb63024121b772c1cb33c}\label{class_count___calories_1_1_main_window_ad471f0ebacbfb63024121b772c1cb33c}} 
+\index{Count\_Calories.MainWindow@{Count\_Calories.MainWindow}!EditMeal@{EditMeal}}
+\index{EditMeal@{EditMeal}!Count\_Calories.MainWindow@{Count\_Calories.MainWindow}}
+\doxysubsubsection{\texorpdfstring{EditMeal()}{EditMeal()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Main\+Window.\+Edit\+Meal (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda otwiera okno Add\+Meal, równocześnie przekazując mu ID posiłku do edycji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_count___calories_1_1_main_window_a294ddb8ecb94d041f3377cfe6b1b8077}\label{class_count___calories_1_1_main_window_a294ddb8ecb94d041f3377cfe6b1b8077}} 
+\index{Count\_Calories.MainWindow@{Count\_Calories.MainWindow}!OpenNewWindow\_Click@{OpenNewWindow\_Click}}
+\index{OpenNewWindow\_Click@{OpenNewWindow\_Click}!Count\_Calories.MainWindow@{Count\_Calories.MainWindow}}
+\doxysubsubsection{\texorpdfstring{OpenNewWindow\_Click()}{OpenNewWindow\_Click()}}
+{\footnotesize\ttfamily void Count\+\_\+\+Calories.\+Main\+Window.\+Open\+New\+Window\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda otwiera okno Add\+Meal, w celu dodania nowego posiłku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Obiekt wywołujący zdarzenie\\
+\hline
+{\em e} & Argument zdarzenia zawierające szczegółowe informacje na jego temat\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projects/\+Count-\/\+Calories/Main\+Window.\+xaml.\+cs\end{DoxyCompactItemize}

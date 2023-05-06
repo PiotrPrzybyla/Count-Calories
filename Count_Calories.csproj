@@ -44,6 +44,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -67,10 +70,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddMeal.xaml.cs">
-      <DependentUpon>AddMeal.xaml</DependentUpon>
+    <Compile Include="AddFromApi.xaml.cs">
+      <DependentUpon>AddFromApi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddIngredient.xaml.cs">
+      <DependentUpon>AddIngredient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddMealWindow.xaml.cs">
+      <DependentUpon>AddMealWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApiProduct.cs" />
+    <Compile Include="EditMealWindow.xaml.cs">
+      <DependentUpon>EditMealWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ingredient.cs" />
+    <Compile Include="IngredientRepository.cs" />
     <Compile Include="MealRepository.cs" />
     <Compile Include="MealUI.cs" />
     <Compile Include="Migrations\202303251724568_InitialCreate.cs" />
@@ -81,10 +95,27 @@
     <Compile Include="Migrations\202304151424486_InitialCreate1.designer.cs">
       <DependentUpon>202304151424486_InitialCreate1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305041736192_InitialCreate2.cs" />
+    <Compile Include="Migrations\202305041736192_InitialCreate2.designer.cs">
+      <DependentUpon>202305041736192_InitialCreate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="UserMeal.cs" />
-    <Page Include="AddMeal.xaml">
+    <Compile Include="ProductRepository.cs" />
+    <Compile Include="ShootAPI.cs" />
+    <Page Include="AddFromApi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddIngredient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddMealWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditMealWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304151424486_InitialCreate1.resx">
       <DependentUpon>202304151424486_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305041736192_InitialCreate2.resx">
+      <DependentUpon>202305041736192_InitialCreate2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

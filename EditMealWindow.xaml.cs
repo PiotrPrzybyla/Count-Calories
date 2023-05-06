@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Count_Calories
 {
     /// <summary>
-    /// Logika interakcji dla klasy AddMeal.xaml
+    /// Logika interakcji dla klasy EditMealWindow.xaml
     /// </summary>
-    public partial class AddMeal : Window
+    public partial class EditMealWindow : Window
     {
-        public AddMeal()
+        public EditMealWindow()
         {
             InitializeComponent();
-        }
-
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        {
-            string inputValue = inputTextBox.Text;
         }
     }
 }

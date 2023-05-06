@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Count_Calories"
         mc:Ignorable="d"
         FontSize="18" FontFamily="Yu Gothic Light"
-        Height="450" Width="800">
+        Height="450" Width="800" Title="Count Calories">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />

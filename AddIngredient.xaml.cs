@@ -70,18 +70,21 @@ namespace Count_Calories
 
         private void CarbsBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int productCarbs = int.Parse(CarbsTextBox.Text);
+            int productCarbs;
+            int.TryParse(CarbsTextBox.Text, out productCarbs);
             product.Carbs = productCarbs;
         }
         private void FatBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int productFat = int.Parse(FatTextBox.Text);
+            int productFat;
+            int.TryParse(FatTextBox.Text, out productFat);
             product.Fat = productFat;
         }
 
         private void ProteinBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int productProtein = int.Parse(ProteinTextBox.Text);
+            int productProtein;
+            int.TryParse(ProteinTextBox.Text, out productProtein);
             product.Protein = productProtein;
         }
 

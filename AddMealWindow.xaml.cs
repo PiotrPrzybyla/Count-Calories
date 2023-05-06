@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 
 namespace Count_Calories
 {
+    /// <summary>
+    /// Klasa obsługująca okno aplikacji służące do dodawania posiłku.
+    /// </summary>
     public partial class AddMealWindow : Window
     {
         private int MealId { get; set; }
